@@ -6,3 +6,8 @@ secrets_*
 
 # Python
 *.pyc
+
+#PyPI
+build
+dist
+sportradar.egg-info
