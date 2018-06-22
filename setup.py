@@ -15,10 +15,16 @@ if mo:
 	version = mo.group(1)
 else:
 	raise RuntimeError("Unable to find version string in {}".format(VERSIONFILE))
-
+	
+here = os.path.abspath(os.path.dirname(__file__))	
+with open(os.path.join(here, 'README.md')) as f:
+	README = f.read()
+	
 setup(name="sportradar",
 	  version=version,
 	  description="A Python wrapper for the Sportradar APIs",
+      long_description=README,
+      long_description_content_type="text/markdown",	  
 	  license="MIT",
 	  author="John W. Miller",
 	  url="https://github.com/johnwmillr/SportradarAPIs",
