@@ -14,9 +14,9 @@ class TestAPI(unittest.TestCase):
 	def setUpClass(cls):
 		print("\n---------------------\nSetting up Sportradar API tests...\n")
 		cls.auth = api_key
-		cls.api = api
+		cls.api = api						
+		cls.response = cls.api.get_tournaments()
 
-	def test_get(self):
-		msg = "Status of response is not 200."
-		uri = ""
-		self.assertEqual(self.api._make_request(uri))
+	def test_valid_status(self):
+		msg = "Response status is not 200."
+		self.assertEqual(self.response.status_code, 200, msg)

@@ -3,3 +3,6 @@
 
 # API credentials
 secrets_*
+
+# Python
+*.pyc
