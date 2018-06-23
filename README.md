@@ -1,4 +1,5 @@
 # Python wrapper for SportRadar APIs
+[![Build Status](https://travis-ci.org/johnwmillr/SportradarAPI.svg?branch=master)](https://travis-ci.org/johnwmillr/SportradarAPI)
 [![PyPI version](https://badge.fury.io/py/sportradar.svg)](https://pypi.org/project/sportradar/)
 [![Python version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://pypi.org/project/sportradar/)
 
