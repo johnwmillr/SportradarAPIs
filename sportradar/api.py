@@ -22,7 +22,7 @@ class API(object):
     session = requests.Session()
     session.headers = {'application': 'PythonAPI'}
 
-    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
+    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=3):
         """ Sportradar API Constructor
 
         :param api_key: key provided by Sportradar, specific to the sport's API
