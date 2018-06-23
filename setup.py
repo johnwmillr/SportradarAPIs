@@ -5,7 +5,7 @@
 import re
 import os
 from setuptools import find_packages, setup
-n
+
 VERSIONFILE = "sportradar/__init__.py"
 ver_file = open(VERSIONFILE, "rt").read()
 VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
