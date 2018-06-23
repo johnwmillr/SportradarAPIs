@@ -7,7 +7,7 @@ api_key_name = "SPORTRADAR_API_KEY_SOCCER"
 api_key = os.environ.get(api_key_name, None)
 assert api_key is not None, "Must declare environment variable: {key_name}".format(
     key_name="SPORTRADAR_API_SOCCER_KEY")
-api = sr.API(api_key, format_='json', language='en', timeout=5, sleep_time=6)
+api = sr.API(api_key, format_='json', language='en', timeout=5, sleep_time=2)
 
 
 class TestAPI(unittest.TestCase):

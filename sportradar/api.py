@@ -22,7 +22,7 @@ class API(object):
     session = requests.Session()
     session.headers = {'application': 'PythonAPI'}
 
-    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=3):
+    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
         """ Sportradar API Constructor
 
         :param api_key: key provided by Sportradar, specific to the sport's API
@@ -47,6 +47,11 @@ class API(object):
                                         full_uri,
                                         timeout=self.timeout,
                                         params=self.api_key)
+        print("*"*30)
+        print(full_uri)
+        print(response.status_code)
+        print(response.headers)
+        print("*"*30)
         # response.raise_for_status()  # Raise error for bad status
         return response
 
