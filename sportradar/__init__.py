@@ -11,5 +11,5 @@ __description__ = 'A Python wrapper for the Sportradar APIs'
 __license__ = 'MIT'
 
 import sys
-assert sys.version_info[0] == 3, 'The SportRadar API requires Python 3.'
+assert sys.version_info[0] == 3, 'The Sportradar API requires Python 3.'
 from .api import API
