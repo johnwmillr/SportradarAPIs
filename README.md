@@ -10,11 +10,11 @@ The easiest way to use this package is to install it via [PyPI](https://pypi.org
 `$pip install sportradar`
 
 If you'd prefer to clone the repository and install it yourself, follow these steps:
-1. Clone this repo:  
-`$git clone https://github.com/johnwmillr/SportradarAPIs.git`
-2. Enter the directory created:  
-`$cd SportradarAPIs`
-3. Install using pip:  
+1. Clone this repo:
+`$git clone https://github.com/johnwmillr/SportradarAPI.git`
+2. Enter the directory created:
+`$cd SportradarAPI`
+3. Install using pip:
 `$python setup.py install`
 
 
@@ -47,7 +47,7 @@ for group in worldcup['groups']:
         except Exception as e:
             print("Error: {}".format(e))
         time.sleep(5) # wait 5 seconds before next API call
-        
+
 # Save the team data to a .json file
 print("Saving the data...", end="", flush=True)
 with open("world_cup_team_data.json", "w") as outfile:
