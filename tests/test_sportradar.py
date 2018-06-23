@@ -6,7 +6,7 @@ import sportradar as sr
 api_key_name = "SPORTRADAR_API_KEY_SOCCER"
 api_key = os.environ.get(api_key_name, None)
 assert api_key is not None, "Must declare environment variable: {key_name}".format(
-        key_name="SPORTRADAR_API_SOCCER_KEY")
+    key_name="SPORTRADAR_API_SOCCER_KEY")
 api = sr.API(api_key, format_='json', language='en', timeout=5, sleep_time=1.5)
 
 
@@ -17,6 +17,11 @@ class TestAPI(unittest.TestCase):
         print("\n---------------------\nSetting up Sportradar API tests...\n")
         cls.auth = api_key
         cls.api = api
+        cls.player_id = "sr:player:149304"
+        cls.team_id = "sr:competitor:4715"
+        cls.team_id_2 = "sr:competitor:4698"
+        cls.match_id = "sr:match:7696036"
+        cls.tournament_id = "sr:tournament:1"
 
     # How do I write proper tests for these?
     # I assume just checking status code isn't good enough.
@@ -43,25 +48,25 @@ class TestAPI(unittest.TestCase):
     def test_get_match_summary(self):
         """Test the match summary GET query"""
         msg = "Response status is not 200."
-        response = self.api.get_match_summary("sr:match:7696036")
+        response = self.api.get_match_summary(self.match_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_match_timeline(self):
         """Test the match timeline GET query"""
         msg = "Response status is not 200."
-        response = self.api.get_match_timeline("sr:match:7696036")
+        response = self.api.get_match_timeline(self.match_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_match_lineups(self):
         """Test the match lineups GET query"""
         msg = "Response status is not 200."
-        response = self.api.get_match_lineups("sr:match:7696036")
+        response = self.api.get_match_lineups(self.match_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_match_probabilities(self):
         """Test the match probabilities GET query"""
         msg = "Response status is not 200."
-        response = self.api.get_match_probabilities("sr:match:7696036")
+        response = self.api.get_match_probabilities(self.match_id)
         self.assertEqual(response.status_code, 200, msg)
 
     # def test_get_match_fun_facts(self):
@@ -73,7 +78,7 @@ class TestAPI(unittest.TestCase):
 
     def test_get_missing_players(self):
         msg = "Response status is not 200."
-        response = self.api.get_missing_players("sr:tournament:1")
+        response = self.api.get_missing_players(self.tournament_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_player_mapping(self):
@@ -83,31 +88,69 @@ class TestAPI(unittest.TestCase):
 
     def test_get_player_profile(self):
         msg = "Response status is not 200."
-        response = self.api.get_player_profile("sr:player:149304")
+        response = self.api.get_player_profile(self.player_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_player_rankings(self):
         msg = "Response status is not 200."
-        response = self.api.get_player_rankings("sr:tournament:1")
+        response = self.api.get_player_rankings(self.tournament_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_team_profile(self):
         msg = "Response status is not 200."
-        response = self.api.get_team_profile("sr:competitor:4715")
+        response = self.api.get_team_profile(self.team_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_team_statistics(self):
         msg = "Response status is not 200."
-        response = self.api.get_team_statistics("sr:tournament:1", "sr:competitor:4698")
+        response = self.api.get_team_statistics(
+            self.tournament_id, self.team_id_2)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_head2head(self):
         msg = "Response status is not 200."
-        response = self.api.get_head2head("sr:competitor:4715", "sr:competitor:4698")
+        response = self.api.get_head2head(
+            self.team_id, self.team_id_2)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_tournaments(self):
         """Test the tournaments GET query"""
         msg = "Response status is not 200."
         response = self.api.get_tournaments()
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_tournament_info(self):
+        """Test the tournament info GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_tournament_info(self.tournament_id)
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_tournament_standings(self):
+        """Test the tournament standings GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_tournament_standings(self.tournament_id)
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_live_standings(self):
+        """Test the live standings GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_live_standings(self.tournament_id)
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_tournament_results(self):
+        """Test the tournament results GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_tournament_results(self.tournament_id)
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_tournament_schedule(self):
+        """Test the tournament schedule GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_tournament_schedule(self.tournament_id)
+        self.assertEqual(response.status_code, 200, msg)
+
+    def test_get_tournament_seasons(self):
+        """Test the tournament seasons GET query"""
+        msg = "Response status is not 200."
+        response = self.api.get_tournament_seasons(self.tournament_id)
         self.assertEqual(response.status_code, 200, msg)

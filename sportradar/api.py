@@ -9,6 +9,7 @@ API details and documentation: https://developer.sportradar.com/io-docs
 import requests
 import time
 
+
 class API(object):
     """Sportradar API
 
@@ -40,7 +41,7 @@ class API(object):
 
     def _make_request(self, path, method='GET'):
         """Make a GET or POST request to the API"""
-        time.sleep(self._sleep_time) # Rate limiting
+        time.sleep(self._sleep_time)  # Rate limiting
         full_uri = self.api_root + path + self.FORMAT
         response = self.session.request(method,
                                         full_uri,
@@ -140,7 +141,8 @@ class API(object):
 
     def get_head2head(self, team_id_1, team_id_2):
         """Provides information on team versus team results"""
-        path = "teams/{_id_1}/versus/{_id_2}/matches".format(_id_1=team_id_1, _id_2=team_id_2)
+        path = "teams/{_id_1}/versus/{_id_2}/matches".format(
+            _id_1=team_id_1, _id_2=team_id_2)
         return self._make_request(path)
 
     def get_tournaments(self):
@@ -151,4 +153,29 @@ class API(object):
     def get_tournament_info(self, tournament_id):
         """Provides information for International Soccer tournaments"""
         path = "tournaments/{_id}/info".format(_id=tournament_id)
+        return self._make_request(path)
+
+    def get_tournament_standings(self, tournament_id):
+        """Provides the standings for International Soccer tournaments"""
+        path = "tournaments/{_id}/standings".format(_id=tournament_id)
+        return self._make_request(path)
+
+    def get_live_standings(self, tournament_id):
+        """Provides the live standings for Soccer tournaments"""
+        path = "tournaments/{_id}/live_standings".format(_id=tournament_id)
+        return self._make_request(path)
+
+    def get_tournament_results(self, tournament_id):
+        """Provides the results for International Soccer tournaments"""
+        path = "tournaments/{_id}/results".format(_id=tournament_id)
+        return self._make_request(path)
+
+    def get_tournament_schedule(self, tournament_id):
+        """Provides the schedule for International Soccer tournaments"""
+        path = "tournaments/{_id}/schedule".format(_id=tournament_id)
+        return self._make_request(path)
+
+    def get_tournament_seasons(self, tournament_id):
+        """Provides the seasons for International Soccer tournaments"""
+        path = "tournaments/{_id}/seasons".format(_id=tournament_id)
         return self._make_request(path)
