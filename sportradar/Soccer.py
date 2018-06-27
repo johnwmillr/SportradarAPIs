@@ -5,7 +5,7 @@
 from sportradar.api import API
 
 
-class SoccerINTLv3(API):
+class Soccer(API):
 
     def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
         super().__init__(api_key, format_, language, timeout, sleep_time)

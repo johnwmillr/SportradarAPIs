@@ -29,10 +29,10 @@ If you'd prefer to clone the repository and install it yourself, follow these st
 Below is a brief demonstration of using the package to download data for the 2018 FIFA World Cup.
 
 ```python
-import sportradar
+from sportradar import Soccer
 
-# Create an instance of the Sportradar API class
-sr = sportradar.API("paste your api key here")
+# Create an instance of the Sportradar Soccer API class
+sr = Soccer.Soccer("paste your api key here")
 
 # Get a list of all tournaments
 tournaments = sr.get_tournaments().json()
