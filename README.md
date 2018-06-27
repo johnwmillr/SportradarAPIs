@@ -5,6 +5,13 @@
 
 This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Luckily, Sportradar provides a free tier that allows for 1,000 API queries per month and up to 1 query per second. The package currently only supports the [Soccer INTL Trial v3](https://developer.sportradar.com/files/indexSoccer.html) API, but I hope to expand it to support their APIs for other sports in the future.
 
+## Supported APIs
+| Sport         | Wrapper       | Tests  |
+|:-------------|:-------------:|:-----:|
+| [Soccer](https://developer.sportradar.com/docs/read/Soccer_API)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
+| [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: |   |
+| [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: |   |
+
 ## Installation
 The easiest way to start using this package is to install it via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
 
