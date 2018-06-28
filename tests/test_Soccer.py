@@ -7,8 +7,9 @@ from sportradar import Soccer
 api_key_name = "SPORTRADAR_API_KEY_SOCCER"
 api_key = os.environ.get(api_key_name, None)
 assert api_key is not None, "Must declare environment variable: {key_name}".format(
-    key_name="SPORTRADAR_API_SOCCER_KEY")
+    key_name=api_key_name)
 api = Soccer.Soccer(api_key, format_='json', language='en', timeout=5, sleep_time=2)
+
 
 class TestAPI(unittest.TestCase):
 

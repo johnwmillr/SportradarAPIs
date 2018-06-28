@@ -34,6 +34,7 @@ class API(object):
 
         assert api_key != '', 'Must supply a non-empty API key.'
         self.api_key = {'api_key': api_key}
+        self.api_root = 'http://api.sportradar.us/'
         self._LANGUAGE = language
         self.FORMAT = "." + format_.strip(".")
         self.timeout = timeout
@@ -48,4 +49,6 @@ class API(object):
                                         timeout=self.timeout,
                                         params=self.api_key)
         # response.raise_for_status()  # Raise error for bad status
+        print(response.url)
+        print('\n')
         return response

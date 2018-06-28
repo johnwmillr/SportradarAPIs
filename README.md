@@ -1,3 +1,5 @@
+# Sportradar APIs
+---
 [![Build Status](https://travis-ci.org/johnwmillr/SportradarAPIs.svg?branch=master)](https://travis-ci.org/johnwmillr/SportradarAPI)
 [![PyPI version](https://badge.fury.io/py/sportradar.svg)](https://pypi.org/project/sportradar/)
 [![Python version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://pypi.org/project/sportradar/)
@@ -8,15 +10,15 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | Sport         | Wrapper       | Tests  |
 |:-------------|:-------------:|:-----:|
 | [Soccer](https://developer.sportradar.com/docs/read/Soccer_API)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
-| [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: |   |
-| [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: |   |
+| [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: | :heavy_check_mark: |
+| [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Installation
 The easiest way to start using this package is to install it via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
 
 `$pip install sportradar`
 
-If you'd prefer to clone the repository and install it yourself, follow these steps:
+If you'd prefer to clone the repository and install the package manually, follow these steps:
 1. Clone this repo:
 `$git clone https://github.com/johnwmillr/SportradarAPI.git`
 2. Enter the cloned directory:
@@ -25,7 +27,7 @@ If you'd prefer to clone the repository and install it yourself, follow these st
 `$python setup.py install`
 
 ## Usage
-Below is a brief demonstration of using the package to download data for the 2018 FIFA World Cup.
+Below is a brief demonstration of how to use the package to download data for the 2018 FIFA World Cup.
 
 ```python
 from sportradar import Soccer
