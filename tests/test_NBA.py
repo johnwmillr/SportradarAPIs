@@ -106,10 +106,10 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_schedule(self.season_year, self.season_type)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_seasonal_statistics_(season_to_date)(self):
+    def test_get_seasonal_statistics_season_to_date(self):
         """Test the seasonal statistics (season to date) GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_seasonal_statistics_(season_to_date)(self.season_year, self.season_type, self.team_id)
+        response = self.api.get_seasonal_statistics_season_to_date(self.season_year, self.season_type, self.team_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_series_schedule(self):
@@ -130,8 +130,8 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_standings(self.season_year, self.season_type)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_team_profile_(rosters)(self):
+    def test_get_team_profile_rosters(self):
         """Test the team profile (rosters) GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_team_profile_(rosters)(self.team_id)
+        response = self.api.get_team_profile_rosters(self.team_id)
         self.assertEqual(response.status_code, 200, msg)

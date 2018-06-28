@@ -99,7 +99,7 @@ class NBA(API):
         print(path)
         return self._make_request(path)
 
-    def get_seasonal_statistics_(season_to_date)(self, season_year, season_type, team_id):
+    def get_seasonal_statistics_season_to_date(self, season_year, season_type, team_id):
         """Provides detailed team and player statistics for the defined season"""
         path = "nba/trial/v4/en/seasons/{season_year}/{season_type}/teams/{team_id}/statistics".format(
             season_year=season_year, season_type=season_type, team_id=team_id)
@@ -127,7 +127,7 @@ class NBA(API):
         print(path)
         return self._make_request(path)
 
-    def get_team_profile_(rosters)(self, team_id):
+    def get_team_profile_rosters(self, team_id):
         """Provides detailed team information including league affiliation information and
             player roster information.
         """

@@ -57,10 +57,10 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_league_hierarchy()
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_play-by-play(self):
+    def test_get_play_by_play(self):
         """Test the play-by-play GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_play-by-play(self.game_id)
+        response = self.api.get_play_by_play(self.game_id)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_player_participation(self):

@@ -47,7 +47,7 @@ class NFL(API):
         print(path)
         return self._make_request(path)
 
-    def get_play-by-play(self, game_id):
+    def get_play_by_play(self, game_id):
         """Obtain complete play-by-play narrative."""
         path = "nfl-ot2/games/{game_id}/pbp".format(game_id=game_id)
         print(path)

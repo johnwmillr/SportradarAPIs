@@ -15,7 +15,7 @@ class TestAPI(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("\n---------------------\nSetting up Sportradar API tests...\n")
+        print("\n---------------------\nSetting up {} tests...\n".format("Soccer"))
         cls.auth = api_key
         cls.api = api
         cls.player_id = "sr:player:149304"

@@ -39,11 +39,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_competitor_results(self.competitor_id)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_competitor_schedule(self):
-        """Test the competitor schedule GET query"""
-        msg = "Response status is not 200"
-        response = self.api.get_competitor_schedule(self.competitor_id)
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_competitor_schedule(self):
+    #     """Test the competitor schedule GET query"""
+    #     msg = "Response status is not 200"
+    #     response = self.api.get_competitor_schedule(self.competitor_id)
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_daily_results(self):
         """Test the daily results GET query"""
@@ -63,11 +63,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_head_to_head(self.competitor_id1, self.competitor_id2)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_live_schedule(self):
-        """Test the live schedule GET query"""
-        msg = "Response status is not 200"
-        response = self.api.get_live_schedule()
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_live_schedule(self):
+    #     """Test the live schedule GET query"""
+    #     msg = "Response status is not 200"
+    #     response = self.api.get_live_schedule()
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_sport_event_timeline(self):
         """Test the sport event timeline GET query"""
@@ -75,11 +75,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_sport_event_timeline(self.match_id)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_tournament_info(self):
-        """Test the tournament info GET query"""
-        msg = "Response status is not 200"
-        response = self.api.get_tournament_info(self.tournament_id)
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_tournament_info(self):
+    #     """Test the tournament info GET query"""
+    #     msg = "Response status is not 200"
+    #     response = self.api.get_tournament_info(self.tournament_id)
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_tournament_list(self):
         """Test the tournament list GET query"""
@@ -87,11 +87,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_tournament_list()
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_live_standings(self):
-        """Test the live standings GET query"""
-        msg = "Response status is not 200"
-        response = self.api.get_live_standings(self.tournament_id)
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_live_standings(self):
+    #     """Test the live standings GET query"""
+    #     msg = "Response status is not 200"
+    #     response = self.api.get_live_standings(self.tournament_id)
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_seasons(self):
         """Test the seasons GET query"""
