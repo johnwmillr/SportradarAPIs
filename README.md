@@ -1,6 +1,6 @@
 # Sportradar APIs
 ---
-[![Build Status](https://travis-ci.org/johnwmillr/SportradarAPIs.svg?branch=master)](https://travis-ci.org/johnwmillr/SportradarAPI)
+[![Build Status](https://travis-ci.org/johnwmillr/SportradarAPIs.svg?branch=master)](https://travis-ci.org/johnwmillr/SportradarAPIs)
 [![PyPI version](https://badge.fury.io/py/sportradar.svg)](https://pypi.org/project/sportradar/)
 [![Python version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://pypi.org/project/sportradar/)
 

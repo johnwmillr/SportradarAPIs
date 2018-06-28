@@ -108,17 +108,17 @@ class TestAPI(unittest.TestCase):
     def test_get_weekly_schedule(self):
         """Test the weekly schedule GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_weekly_schedule(self.year, self.nfl_season, self.nfl_season_week)
+        response = self.api.get_weekly_schedule(2017, 'REG', 13)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_weekly_injuries(self):
         """Test the weekly injuries GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_weekly_injuries(self.year, self.nfl_season, self.nfl_season_week)
+        response = self.api.get_weekly_injuries(2017, 'REG', 13)
         self.assertEqual(response.status_code, 200, msg)
 
     def test_get_weekly_depth_charts(self):
         """Test the weekly depth charts GET query"""
         msg = "Response status is not 200"
-        response = self.api.get_weekly_depth_charts(self.year, self.nfl_season, self.nfl_season_week)
+        response = self.api.get_weekly_depth_charts(2017, 'REG', 13)
         self.assertEqual(response.status_code, 200, msg)

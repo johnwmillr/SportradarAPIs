@@ -31,7 +31,7 @@ class NFL(API):
         """Obtain the roster information for each teams, as well as player profile da
             ta.
         """
-        path = "nfl-ot2/games/{game_id}/roste".format(game_id=game_id)
+        path = "nfl-ot2/games/{game_id}/roster".format(game_id=game_id)
         print(path)
         return self._make_request(path)
 
@@ -93,7 +93,7 @@ class NFL(API):
 
     def get_team_roster(self, team_id):
         """Obtain the complete roster of players for a given team"""
-        path = "nfl-ot2/teams/{team_id}/full_roste".format(team_id=team_id)
+        path = "nfl-ot2/teams/{team_id}/full_roster".format(team_id=team_id)
         print(path)
         return self._make_request(path)
 
