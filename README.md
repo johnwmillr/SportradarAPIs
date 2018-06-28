@@ -10,6 +10,8 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | Sport         | Wrapper       | Tests  |
 |:-------------|:-------------:|:-----:|
 | [Soccer](https://developer.sportradar.com/docs/read/Soccer_API)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
+| [NBA](https://developer.sportradar.com/docs/read/NBA_API)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
+| [NFL](https://developer.sportradar.com/files/indexFootball.html)  :football: | :heavy_check_mark: | :heavy_check_mark: |
 | [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: | :heavy_check_mark: |
 | [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: | :heavy_check_mark: |
 
