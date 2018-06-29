@@ -5,7 +5,7 @@
 """
 Sportradar APIs library
 """
-__version__ = '0.5.1'
+__version__ = '1.0.0'
 __author__ = 'John W. Miller'
 __description__ = 'A Python wrapper for the Sportradar APIs'
 __license__ = 'MIT'
