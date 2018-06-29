@@ -43,6 +43,8 @@ class API(object):
         """Make a GET or POST request to the API"""
         time.sleep(self._sleep_time)  # Rate limiting
         full_uri = self.api_root + path + self.FORMAT
+        print(path)
+        print(full_uri)
         response = self.session.request(method,
                                         full_uri,
                                         timeout=self.timeout,
