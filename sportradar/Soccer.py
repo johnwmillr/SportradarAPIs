@@ -8,8 +8,11 @@ from sportradar.api import API
 class Soccer(API):
 
     def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
-        super().__init__(api_key, format_, language, timeout, sleep_time)
+        super().__init__(api_key, format_, timeout, sleep_time)
         self.api_root = 'https://api.sportradar.us/soccer-t3/intl/' + self._LANGUAGE + '/'
+
+
+"https://api.sportradar.us/soccer-{access_level}{version}/{league_group}/{language_code}/schedules/{year}-{month}-{day}/schedule.{format}?api_key={your_api_key}"
 
     def get_daily_results(self, year, month, day):
         """Provides match information and scoring, for all matches

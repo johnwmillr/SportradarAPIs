@@ -7,8 +7,8 @@ from sportradar.api import API
 
 class BeachVolleyball(API):
 
-    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
-        super().__init__(api_key, format_, language, timeout, sleep_time)
+    def __init__(self, api_key, format_='json', timeout=5, sleep_time=1.5):
+        super().__init__(api_key, format_, timeout, sleep_time)
 
     def get_competitor_profile(self, competitor_id):
         """Provides information for a given competitor"""

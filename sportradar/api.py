@@ -22,7 +22,7 @@ class API(object):
     session = requests.Session()
     session.headers = {'application': 'PythonWrapper'}
 
-    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
+    def __init__(self, api_key, format_='json', timeout=5, sleep_time=1.5):
         """ Sportradar API Constructor
 
         :param api_key: key provided by Sportradar, specific to the sport's API
@@ -35,7 +35,6 @@ class API(object):
         assert api_key != '', 'Must supply a non-empty API key.'
         self.api_key = {'api_key': api_key}
         self.api_root = 'http://api.sportradar.us/'
-        self._LANGUAGE = language
         self.FORMAT = "." + format_.strip(".")
         self.timeout = timeout
         self._sleep_time = sleep_time

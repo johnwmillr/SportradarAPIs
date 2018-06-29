@@ -7,8 +7,8 @@ from sportradar.api import API
 
 class WNBA(API):
 
-    def __init__(self, api_key, format_='json', language='en', timeout=5, sleep_time=1.5):
-        super().__init__(api_key, format_, language, timeout, sleep_time)
+    def __init__(self, api_key, format_='json', timeout=5, sleep_time=1.5):
+        super().__init__(api_key, format_, timeout, sleep_time)
 
     def get_daily_change_log(self, year, month, day):
         """information on any changes made to teams, players, game statistics, and
@@ -28,7 +28,7 @@ class WNBA(API):
 
     def get_daily_transfers(self, year, month, day):
         """information for all transfers added or edited during the league defined day
-            
+
         """
         path = "wnba/trial/v4/en/league/{year:4d}/{month:02d}/{day:02d}/transfers".format(
             year=year, month=month, day=day)
