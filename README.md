@@ -28,9 +28,9 @@ The easiest way to start using this package is to install it via [PyPI](https://
 
 If you'd prefer to clone the repository and install the package manually, follow these steps:
 1. Clone this repo:
-`$git clone https://github.com/johnwmillr/SportradarAPI.git`
+`$git clone https://github.com/johnwmillr/SportradarAPIs.git`
 2. Enter the cloned directory:
-`$cd SportradarAPI`
+`$cd SportradarAPIs`
 3. Install:
 `$python setup.py install`
 

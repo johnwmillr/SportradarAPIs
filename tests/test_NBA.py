@@ -7,8 +7,7 @@ api_key_name = "SPORTRADAR_API_KEY_NBA"
 api_key = os.environ.get(api_key_name, None)
 assert api_key is not None, "Must declare environment variable: {key_name}".format(
     key_name=api_key_name)
-api = NBA.NBA(api_key, format_="json", language="en",
-    timeout=5, sleep_time=2)
+api = NBA.NBA(api_key, format_="json", timeout=5, sleep_time=2)
 
 
 class TestAPI(unittest.TestCase):

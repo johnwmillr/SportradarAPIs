@@ -49,6 +49,4 @@ class API(object):
                                         timeout=self.timeout,
                                         params=self.api_key)
         # response.raise_for_status()  # Raise error for bad status
-        print(response.url)
-        print('\n')
         return response
