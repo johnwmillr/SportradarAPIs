@@ -9,8 +9,9 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 ## Supported APIs
 | Sport         | Wrapper       | Tests  |
 |:-------------|:-------------:|:-----:|
-| [Soccer](https://developer.sportradar.com/docs/read/Soccer_API)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
-| [NBA](https://developer.sportradar.com/docs/read/NBA_API)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
+| [Soccer](https://developer.sportradar.com/files/indexSoccer.html)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
+| [NBA](https://developer.sportradar.com/files/indexBasketball.html#nba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
+| [WNBA](https://developer.sportradar.com/files/indexBasketball.html#wnba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
 | [NFL](https://developer.sportradar.com/files/indexFootball.html)  :football: | :heavy_check_mark: | :heavy_check_mark: |
 | [MLB](https://developer.sportradar.com/files/indexBaseball.html)  :baseball: | :heavy_check_mark: | :heavy_check_mark: |
 | [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: | :heavy_check_mark: |
