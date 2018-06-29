@@ -14,6 +14,7 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | [NFL](https://developer.sportradar.com/files/indexFootball.html)  :football: | :heavy_check_mark: | :heavy_check_mark: |
 | [Darts](https://developer.sportradar.com/files/indexDarts.html)   :dart:   | :heavy_check_mark: | :heavy_check_mark: |
 | [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: | :heavy_check_mark: |
+| [Golf](https://developer.sportradar.com/files/indexGolf.html) :golf: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Installation
 The easiest way to start using this package is to install it via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
