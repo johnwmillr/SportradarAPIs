@@ -4,7 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/sportradar.svg)](https://pypi.org/project/sportradar/)
 [![Python version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://pypi.org/project/sportradar/)
 
-This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Luckily, Sportradar provides a free trial evaluation that provides 1,000 API queries at up to 1 query per second.
+This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Sportradar provides a free trial evaluation that provides 1,000 API queries at up to 1 query per second.
 
 ## Supported APIs
 | Sport         | Wrapper       | Tests  |
@@ -20,9 +20,11 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | [Beach volleyball](https://developer.sportradar.com/files/indexVolleyball.html) :palm_tree: | :heavy_check_mark: | :heavy_check_mark: |
 | [Golf](https://developer.sportradar.com/files/indexGolf.html) :golf: | :heavy_check_mark: | :heavy_check_mark: |
 | [NASCAR](https://developer.sportradar.com/files/indexRacing.html#official-nascar-api) :red_car: | :heavy_check_mark: | :heavy_check_mark: |
+| [LoL](https://developer.sportradar.com/files/indexeSports.html) :video_game: | :heavy_check_mark: | :heavy_check_mark: |
+| [Dota2](https://developer.sportradar.com/files/indexeSports.html) :video_game: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Installation
-The easiest way to start using this package is to install it via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
+The easiest way to start using this package is via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
 
 `$pip install sportradar`
 
