@@ -4,7 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/sportradar.svg)](https://pypi.org/project/sportradar/)
 [![Python version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://pypi.org/project/sportradar/)
 
-This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Luckily, Sportradar provides a free tier that allows for 1,000 API queries per month and up to 1 query per second.
+This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Luckily, Sportradar provides a free trial evaluation that provides 1,000 API queries at up to 1 query per second.
 
 ## Supported APIs
 | Sport         | Wrapper       | Tests  |

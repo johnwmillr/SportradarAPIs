@@ -11,12 +11,7 @@ import time
 
 
 class API(object):
-    """Sportradar API
-
-    *Currently only supports the "Soccer INTL Trial v3" API*
-    *Will be generalized to support multiple APIs from Sportradar
-    (e.g. NFL, NBA, etc.)*
-    """
+    """Sportradar API"""
 
     # Create a persistent requests connection
     session = requests.Session()
