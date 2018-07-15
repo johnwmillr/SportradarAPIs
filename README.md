@@ -61,7 +61,7 @@ for group in worldcup['groups']:
         team_name = team['name']
         print("({}): {}, {}".format(team_counter, team_name, team_id))
         try:
-            teams.append(sportsradar.get_team_profile(team_id).json())
+            teams.append(sr.get_team_profile(team_id).json())
         except Exception as e:
             print("Error: {}".format(e))
         time.sleep(5) # wait 5 seconds before next API call
