@@ -7,8 +7,8 @@
 This is a Python wrapper for the sports APIs provided by [Sportradar](https://developer.sportradar.com/io-docs). You'll need to [sign up](https://developer.sportradar.com/member/register) for an API key to use the service. Sportradar provides a free trial evaluation that provides 1,000 API queries at up to 1 query per second.
 
 ## Supported APIs
-| Sport         | Wrapper       | Tests  |
-|:-------------|:-------------:|:-----:|
+| Sport         | API Wrapper   | Unit Tests  |
+|:--------------|:-------------:|:-----------:|
 | [Soccer](https://developer.sportradar.com/files/indexSoccer.html)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
 | [NBA](https://developer.sportradar.com/files/indexBasketball.html#nba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
 | [WNBA](https://developer.sportradar.com/files/indexBasketball.html#wnba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
