@@ -22,6 +22,7 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | [NASCAR](https://developer.sportradar.com/files/indexRacing.html#official-nascar-api) :red_car: | :heavy_check_mark: | :heavy_check_mark: |
 | [LoL](https://developer.sportradar.com/files/indexeSports.html) :video_game: | :heavy_check_mark: | :heavy_check_mark: |
 | [Dota2](https://developer.sportradar.com/files/indexeSports.html) :video_game: | :heavy_check_mark: | :heavy_check_mark: |
+| [Cricket](https://developer.sportradar.com/files/indexCricket.html) :cricket: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Installation
 The easiest way to start using this package is via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
