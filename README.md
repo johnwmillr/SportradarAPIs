@@ -12,6 +12,7 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | [Soccer](https://developer.sportradar.com/files/indexSoccer.html)  :soccer: | :heavy_check_mark: | :heavy_check_mark: |
 | [NBA](https://developer.sportradar.com/files/indexBasketball.html#nba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
 | [WNBA](https://developer.sportradar.com/files/indexBasketball.html#wnba-api-v4)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
+| [NCAAMB](https://developer.sportradar.com/files/indexBasketball.html#ncaamb-api-v7)  :basketball: | :heavy_check_mark: | :heavy_check_mark: |
 | [NFL](https://developer.sportradar.com/files/indexFootball.html)  :football: | :heavy_check_mark: | :heavy_check_mark: |
 | [NHL](https://developer.sportradar.com/files/indexHockey.html)  :trophy: | :heavy_check_mark: | :heavy_check_mark: |
 | [Tennis](https://developer.sportradar.com/files/indexTennis.html)  :tennis: | :heavy_check_mark: | :heavy_check_mark: |
