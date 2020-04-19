@@ -79,7 +79,7 @@ class NCAAMB(API):
         """Get the standings for the NCAAMB"""
         return self._make_request(f"{self.prefix}seasons/{season_year}/{season_type}/standings")
 
-    def get_team_profile_rosters(self, team_id):
+    def get_team_profile(self, team_id):
         """Provides detailed team information including league affiliation information and
             player roster information.
         """
