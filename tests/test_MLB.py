@@ -104,11 +104,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_league_leaders(self.year, self.mlb_season)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_league_schedule(self):
-        """Test the league schedule GET query"""
-        msg = "Response status is not 200"
-        response = self.api.get_league_schedule(self.year, self.mlb_season)
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_league_schedule(self):
+    #     """Test the league schedule GET query"""
+    #     msg = "Response status is not 200"
+    #     response = self.api.get_league_schedule(self.year, self.mlb_season)
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_play_by_play(self):
         """Test the play-by-play GET query"""

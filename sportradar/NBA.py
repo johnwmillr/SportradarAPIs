@@ -12,7 +12,7 @@ class NBA(API):
         super().__init__(api_key, format_, timeout, sleep_time)
         self.access_level = access_level
         self.language = language
-        self.version = 1
+        self.version = 7
         self.prefix = 'nba/{level}/v{ver}/{lang}/'.format(
                         level=self.access_level, ver=self.version, lang=self.language)
 
