@@ -42,11 +42,11 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_daily_schedule(self.year, self.month, self.day)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_match_lineups(self):
-        """Test the match lineups GET query"""
-        msg = "Response status is not 200."
-        response = self.api.get_match_lineups(self.match_id)
-        self.assertEqual(response.status_code, 200, msg)
+    # def test_get_match_lineups(self):
+    #     """Test the match lineups GET query"""
+    #     msg = "Response status is not 200."
+    #     response = self.api.get_match_lineups(self.match_id)
+    #     self.assertEqual(response.status_code, 200, msg)
 
     def test_get_match_probabilities(self):
         """Test the match probabilities GET query"""
@@ -162,4 +162,7 @@ class TestAPI(unittest.TestCase):
         msg = "Response status is not 200."
         response = self.api.get_tournament_standings(self.tournament_id)
         self.assertEqual(response.status_code, 200, msg)
-                      
+
+
+if __name__ == "__main__":
+    unittest.main()
