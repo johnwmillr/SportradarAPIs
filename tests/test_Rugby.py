@@ -112,11 +112,6 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_season_info(self.season_id)
         self.assertEqual(response.status_code, 200, msg)
 
-    def test_get_season_leaders(self):
-        msg = "Response status is not 200."
-        response = self.api.get_season_leaders(self.season_id)
-        self.assertEqual(response.status_code, 200, msg)
-
     def test_get_season_list(self):
         """Test the season GET query"""
         msg = "Response status is not 200."

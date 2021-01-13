@@ -105,12 +105,6 @@ class Rugby(API):
             season=season)
         return self._make_request(self.prefix + path)
 
-    def get_season_leaders(self, season):
-        """Provide information pertaining to a given season."""
-        path = "seasons/{season}/leaders".format(
-            season=season)
-        return self._make_request(self.prefix + path)
-
     def get_season_list(self):
         """Provide the season list."""
         path = "seasons"
