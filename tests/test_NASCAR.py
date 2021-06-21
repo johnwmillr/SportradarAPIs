@@ -42,6 +42,12 @@ class TestAPI(unittest.TestCase):
         response = self.api.get_schedule(self.nascar_series, self.year)
         self.assertEqual(response.status_code, 200, msg)
 
+    def test_get_playoff_schedule(self):
+        """Test the playoff schedule GET query"""
+        msg = "Response status is not 200"
+        response = self.api.get_playoff_schedule(self.nascar_series, self.year)
+        self.assertEqual(response.status_code, 200, msg)
+
     def test_get_entry_list(self):
         """Test the entry list GET query"""
         msg = "Response status is not 200"
