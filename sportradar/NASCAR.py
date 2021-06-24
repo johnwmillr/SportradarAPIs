@@ -36,6 +36,15 @@ class NASCAR(API):
         print(path)
         return self._make_request(path)
 
+    def get_playoff_schedule(self, nascar_series, year):
+        """Obtain playoff schedule for NASCAR. NOTE: The 2012 sample data is an abbreviated
+            season
+        """
+        path = "nascar-ot3/{nascar_series}/{year:4d}/playoff/schedule".format(
+            nascar_series=nascar_series, year=year)
+        print(path)
+        return self._make_request(path)
+
     def get_entry_list(self, nascar_series, race_id):
         """Obtain entry list information for NASCAR. NOTE: The 2012 sample data is an
             abbreviated season
@@ -107,4 +116,3 @@ class NASCAR(API):
             year=year, month=month, day=day)
         print(path)
         return self._make_request(path)
-
