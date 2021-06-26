@@ -43,14 +43,14 @@ class Motorsport(API):
     def daily_results(self, year, month, day):
         """
         """
-        path = "{prefix}/schedules/{year:4d}-{month:2d}-{day:2d}/results".format(
+        path = "{prefix}/schedules/{year:4d}-{month:02d}-{day:02d}/results".format(
             prefix=self.api_prefix, year=year, month=month, day=day)
         return self._make_request(path)
 
     def daily_schedule(self, year, month, day):
         """
         """
-        path = "{prefix}/schedules/{year:4d}-{month:2d}-{day:2d}/schedule".format(
+        path = "{prefix}/schedules/{year:4d}-{month:02d}-{day:02d}/schedule".format(
             prefix=self.api_prefix, year=year, month=month, day=day)
         return self._make_request(path)
 
