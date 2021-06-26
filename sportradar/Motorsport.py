@@ -8,44 +8,117 @@ from sportradar.api import API
 
 class Motorsport(API):
 
-    def __init__(self, api_key, access_level='t', language='en', format_='json', timeout=5, sleep_time=1.5):
+    def __init__(self, api_key, access_level='t', language='en', format_='json',
+        timeout=5, sleep_time=1.5):
         self.access_level = access_level
-        self.version = 3
+        self.version = 1
         self.language = language
         self.sport = 'motorsport'
-        self.api_prefix = "{sport}-{access_level}{version}/{language_code}".format(sport=self.sport, access_level = self.access_level, version = self.version))
+        self.api_prefix = "{sport}-{access_level}{version}/{language_code}".format(
+            sport=self.sport, access_level=self.access_level,
+            version=self.version, language_code=self.language)
         super().__init__(api_key, format_, timeout, sleep_time)
 
-    def get_competitor_profile(self, competitor_id):
+    def competitor_profile(self, competitor_id):
         """Obtain competitor profile for Motorcycle.
         """
-        path = "{prefix}/competitors/{competitor_id}/results".format(
-            prefix=self.api_prefix, competitor_id = competitor_id)
-        logging.info(path)
+        path = "{prefix}/competitors/{competitor_id}/profile".format(
+            prefix=self.api_prefix, competitor_id=competitor_id)
         return self._make_request(path)
 
-    def get_competitor_profile(self, competitor_id):
-        """Obtain competitor profile for Motorcycle.
+    def competitor_results(self, competitor_id):
+        """Obtain competitor results for Motorcycle.
         """
         path = "{prefix}/competitors/{competitor_id}/results".format(
-            prefix=self.api_prefix, competitor_id = competitor_id)
-        logging.info(path)
+            prefix=self.api_prefix, competitor_id=competitor_id)
         return self._make_request(path)
 
-    #def get_entry_list(self, nascar_series, race_id):
-    #    """Obtain entry list information for NASCAR. NOTE: The 2012 sample data is an
-    #        abbreviated season
-    #    """
-    #    path = "nascar-ot3/{nascar_series}/races/{race_id}/entry_list".format(
-    #        nascar_series=nascar_series, race_id=race_id)
-    #    print(path)
-    #    return self._make_request(path)
+    def competitor_schedule(self, competitor_id):
+        """Obtain competitor schedule for Motorcycle.
+        """
+        path = "{prefix}/competitors/{competitor_id}/schedule".format(
+            prefix=self.api_prefix, competitor_id=competitor_id)
+        return self._make_request(path)
 
-    #def get_daily_change_log(self, year, month, day):
-    #    """information on any changes made to race information, race results, driver
-    #        information, track information, or standings
-    #    """
-    #    path = "nascar-ot3/{year:4d}/{month:02d}/{day:02d}/changes".format(
-    #        year=year, month=month, day=day)
-    #    print(path)
-    #    return self._make_request(path)
+    def daily_results(self, year, month, day):
+        """
+        """
+        path = "{prefix}/schedules/{year:4d}-{month:2d}-{day:2d}/results".format(
+            prefix=self.api_prefix, year=year, month=month, day=day)
+        return self._make_request(path)
+
+    def daily_schedule(self, year, month, day):
+        """
+        """
+        path = "{prefix}/schedules/{year:4d}-{month:2d}-{day:2d}/schedule".format(
+            prefix=self.api_prefix, year=year, month=month, day=day)
+        return self._make_request(path)
+
+    def head_to_head(self, competitor_id, competitor_id2):
+        """
+        """
+        path = "{prefix}/competitors/{competitor_id}/versus/{competitor_id2}/matches".format(
+            prefix=self.api_prefix, competitor_id=competitor_id, competitor_id2=competitor_id2)
+        return self._make_request(path)
+
+    def seasons(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/seasons".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
+
+    def sport_event_probabilities(self, match_id):
+        """
+        """
+        path = "{prefix}/matches/{match_id}/probabilities".format(
+            prefix=self.api_prefix, match_id=match_id)
+        return self._make_request(path)
+
+    def sport_event_timeline(self, match_id):
+        """
+        """
+        path = "{prefix}/sport_events/{match_id}/timeline".format(
+            prefix=self.api_prefix, match_id=match_id)
+        return self._make_request(path)
+
+    def tournament_info(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/info".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
+
+    def tournament_list(self):
+        """
+        """
+        path = "{prefix}/tournaments".format(prefix=self.api_prefix)
+        return self._make_request(path)
+
+    def tournament_live_standings(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/live_standings".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
+
+    def tournament_results(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/results".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
+
+    def tournament_schedule(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/schedule".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
+
+    def tournament_standings(self, tournament_or_season_id):
+        """
+        """
+        path = "{prefix}/tournaments/{tournament_or_season_id}/standings".format(
+            prefix=self.api_prefix, tournament_or_season_id=tournament_or_season_id)
+        return self._make_request(path)
