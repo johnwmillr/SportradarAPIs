@@ -1,7 +1,7 @@
 # Sportradar APIs
+# Copyright 2018 John W. Miller
+# Copyright 2021 Teresa Fontanella De Santis
 # See LICENSE for details.
-
-import logging
 
 from sportradar.api import API
 
@@ -10,7 +10,7 @@ class Motorsport(API):
     """Motorsport API"""
 
     def __init__(self, api_key, access_level='t', language='en', format_='json',
-        timeout=5, sleep_time=1.5):
+                 timeout=5, sleep_time=1.5):
         self.access_level = access_level
         self.version = 1
         self.language = language
