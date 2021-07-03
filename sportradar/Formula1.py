@@ -12,7 +12,7 @@ class Formula1(API):
     def __init__(self, api_key, access_level='trial', language='en', format_='json',
                  timeout=5, sleep_time=1.5):
         self.access_level = access_level
-        self.version = 1
+        self.version = 'v2'
         self.language = language
         self.sport = 'formula1'
         self.api_prefix = "{sport}/{access_level}/{version}/{language_code}".format(
@@ -28,38 +28,23 @@ class Formula1(API):
             prefix=self.api_prefix, competitor_id=competitor_id)
         return self._make_request(path)
 
-    def seasons(self, competitor_id):
-        """Obtain competitor results for Motorcycle.
-        :param competitor_id: id of a given competitor.
-        """
-        path = "{prefix}/competitors/{competitor_id}/results".format(
-            prefix=self.api_prefix, competitor_id=competitor_id)
+    def seasons(self):
+        """Obtain full list of seasons for Formula 1."""
+        path = "{prefix}/seasons".format(prefix=self.api_prefix)
         return self._make_request(path)
 
-    def competitor_schedule(self, competitor_id):
-        """Obtain competitor schedule for Motorcycle.
-        :param competitor_id: id of a given competitor.
+    def stage_probabilities(self, stage_id):
+        """Obtain stage probabilities for Formula 1.
+        :param stage_id: id of a given stage.
         """
-        path = "{prefix}/competitors/{competitor_id}/schedule".format(
-            prefix=self.api_prefix, competitor_id=competitor_id)
+        path = "{prefix}/sport_events/{stage_id}/probabilities".format(
+            prefix=self.api_prefix, stage_id=stage_id)
         return self._make_request(path)
 
-    def daily_results(self, year, month, day):
-        """Obtain daily results.
-        :param year: year int. Must be greater or equal than 2014.
-        :param month: month int. Must be between 1 and 12.
-        :param day: day int.
+    def stage_summary(self, stage_id):
+        """Obtain stage summary for Formula 1.
+        :param stage_id: id of a given stage.
         """
-        path = "{prefix}/schedules/{year:4d}-{month:02d}-{day:02d}/results".format(
-            prefix=self.api_prefix, year=year, month=month, day=day)
-        return self._make_request(path)
-
-    def daily_schedule(self, year, month, day):
-        """Obtain daily schedule.
-        :param year: year int. Must be greater or equal than 2014.
-        :param month: month int. Must be between 1 and 12.
-        :param day: day int.
-        """
-        path = "{prefix}/schedules/{year:4d}-{month:02d}-{day:02d}/schedule".format(
-            prefix=self.api_prefix, year=year, month=month, day=day)
+        path = "{prefix}/sport_events/{stage_id}/summary".format(
+            prefix=self.api_prefix, stage_id=stage_id)
         return self._make_request(path)
