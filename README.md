@@ -25,6 +25,7 @@ This is a Python wrapper for the sports APIs provided by [Sportradar](https://de
 | [Dota2](https://developer.sportradar.com/files/indexeSports.html) :video_game: | :heavy_check_mark: | :heavy_check_mark: |
 | [Cricket](https://developer.sportradar.com/files/indexCricket.html) :cricket: | :heavy_check_mark: | :heavy_check_mark: |
 | [Rugby](https://developer.sportradar.com/docs/read/rugby/Rugby_v2) :rugby_football: | :heavy_check_mark: | :heavy_check_mark: |
+| [Handball](https://developer.sportradar.com/docs/read/handball/handball_v2) :handball_person:| :heavy_check_mark: | :heavy_check_mark: |
 
 ## Installation
 The easiest way to start using this package is via [PyPI](https://pypi.org/project/sportradar/) using `pip`:
