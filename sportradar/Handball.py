@@ -49,10 +49,33 @@ class Handball(API):
 
         return self._make_request(self.prefix + path)
     
+    def get_season_competitor_statistics(self, season_id, comp_id):
+        """Provides list of all competitors in a given season."""
+        path = "seasons/{_id}/competitors/{_id_comp}/statistics".format(_id=season_id, _id_comp=comp_id)
+
+        return self._make_request(self.prefix + path)
+    
+    def get_simple_team_mappings(self, season_id):
+        """Provides list of all competitors in a given season."""
+        path = "seasons/{_id}/simple_team_mappings".format(_id=season_id)
+
+        return self._make_request(self.prefix + path)
+    
+    def get_team_profile(self, team_id):
+        """Team information, including player roster information"""
+        path = "competitors/{_id}/profile".format(_id=team_id)
+        return self._make_request(self.prefix + path)
+    
     def get_player_profile(self, player_id):
         """Provides player information"""
         path = "players/{_id}/profile".format(_id=player_id)
         return self._make_request(self.prefix + path)    
+    
+    def get_season_players(self, season_id):
+        """Provides list of all competitors in a given season."""
+        path = "seasons/{_id}/players".format(_id=season_id)
+
+        return self._make_request(self.prefix + path)
 
 
     def get_sport_event_timeline(self, match_id):
