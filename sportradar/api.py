@@ -1,5 +1,7 @@
 # Sportradar APIs
 # Copyright 2018 John W. Miller
+# Updated 2023 by Michael Adams (github.com/mad4ms)
+
 # See LICENSE for details.
 
 """
@@ -34,15 +36,31 @@ class API(object):
         self.timeout = timeout
         self._sleep_time = sleep_time
 
-    def _make_request(self, path, method='GET'):
-        """Make a GET or POST request to the API"""
+    def _make_request(self, path, method='GET', params=None):
+        """Make a GET or POST request to the API
+
+        :param path: the API endpoint path
+        :param method: the HTTP method to use (GET, POST)
+        :param params: additional parameters to include in the request
+        :return: the response from the API
+        """
         time.sleep(self._sleep_time)  # Rate limiting
         full_uri = self.api_root + path + self.FORMAT
-        print(path)
-        print(full_uri)
+        print(path)  # Print the path for debugging
+        print(full_uri)  # Print the full URI for debugging
+
+        # Update the parameters with the API key
+
+        # Attention: Sportradar has changed some of their API in Handball and possibly other sports too.
+        # There is now a limit (100) on how many summaries can be requested at once.
+        # Have a look at the get_season_summaries method in Handball.py to see an example.
+        if params is None:
+            params = {}
+        params.update(self.api_key)
+
         response = self.session.request(method,
                                         full_uri,
                                         timeout=self.timeout,
-                                        params=self.api_key)
+                                        params=params)
         # response.raise_for_status()  # Raise error for bad status
         return response

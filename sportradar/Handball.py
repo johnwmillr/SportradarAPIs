@@ -1,5 +1,6 @@
 # Sportradar APIs
 # Copyright 2018 John W. Miller
+# Implemented by Michael Adams (github.com/mad4ms)
 # See LICENSE for details.
 
 from sportradar.api import API
@@ -43,11 +44,19 @@ class Handball(API):
 
         return self._make_request(self.prefix + path)
     
-    def get_season_summaries(self, season_id):
-        """Provides list of all competitors in a given season."""
+    def get_season_summaries(self, season_id, start=None, limit=None):
+        """Provides list of all competitors in a given season with optional start and limit parameters."""
         path = "seasons/{_id}/summaries".format(_id=season_id)
 
-        return self._make_request(self.prefix + path)
+        # Prepare parameters dictionary
+        params = {}
+        if start is not None:
+            params['start'] = start
+        if limit is not None:
+            params['limit'] = limit
+
+        return self._make_request(self.prefix + path, params=params)
+
     
     def get_player_profile(self, player_id):
         """Provides player information"""
