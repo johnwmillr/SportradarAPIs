@@ -1,5 +1,5 @@
-certifi==2023.7.22
-chardet==3.0.4
-idna==2.7
-requests==2.31.0
-urllib3==1.26.18
+certifi==2024.7.4
+chardet==5.2.0
+idna==3.7
+requests==2.32.3
+urllib3==2.2.2
