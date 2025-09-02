@@ -1,6 +1,5 @@
 # Sportradar APIs
 # Copyright 2018 John W. Miller
-# Copyright 2021 Teresa Fontanella De Santis
 # See LICENSE for details.
 
 from sportradar.api import API
